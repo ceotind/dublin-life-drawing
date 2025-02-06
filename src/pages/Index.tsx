@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -90,6 +91,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
