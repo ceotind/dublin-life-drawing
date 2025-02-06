@@ -3,11 +3,28 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
+  const { toast } = useToast();
+  const { register, handleSubmit, reset } = useForm();
+
   useEffect(() => {
     console.log("Homepage mounted");
   }, []);
+
+  const onSubmit = (data: any) => {
+    console.log("Form submitted:", data);
+    toast({
+      title: "Message sent!",
+      description: "We'll get back to you as soon as possible.",
+    });
+    reset();
+  };
 
   return (
     <div className="min-h-screen bg-[#FAFAF9]">
@@ -89,6 +106,50 @@ const Index = () => {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12 animate-fadeIn">
+            <span className="text-primary font-medium">Get in Touch</span>
+            <h2 className="text-3xl font-serif mb-4">Contact Us</h2>
+            <p className="text-gray-600">
+              Have questions about our classes or artwork? Drop us a message and we'll get back to you.
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 animate-fadeIn">
+            <div>
+              <Input
+                placeholder="Your Name"
+                {...register("name", { required: true })}
+                className="w-full"
+              />
+            </div>
+            <div>
+              <Input
+                type="email"
+                placeholder="Your Email"
+                {...register("email", { required: true })}
+                className="w-full"
+              />
+            </div>
+            <div>
+              <Textarea
+                placeholder="Your Message"
+                {...register("message", { required: true })}
+                className="w-full min-h-[150px]"
+              />
+            </div>
+            <div className="text-center">
+              <Button type="submit" className="w-full sm:w-auto">
+                Send Message
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </form>
         </div>
       </section>
 
