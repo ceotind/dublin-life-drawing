@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -104,6 +104,63 @@ const Index = () => {
                 alt="Art class in session"
                 className="object-cover w-full h-full"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-[500px] rounded-lg overflow-hidden animate-fadeIn">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                alt="Life drawing class"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="animate-slideIn space-y-6">
+              <h2 className="text-3xl font-serif mb-6">LIFE CLASSES</h2>
+              <p className="text-gray-600">
+                Weekly life classes.
+              </p>
+              <p className="text-gray-600">
+                On Friday evenings there are untaught sessions and we have taught classes on Tuesday evenings. You can book with paypal or email{" "}
+                <a href="mailto:dublindrawing@gmail.com" className="text-primary hover:underline inline-flex items-center">
+                  dublindrawing@gmail.com
+                  <Mail className="ml-1 h-4 w-4" />
+                </a>{" "}
+                for a payment link.
+              </p>
+              <p className="text-gray-600 font-medium">
+                Classes start at 6.30PM
+              </p>
+              <div className="space-y-4">
+                <div className="bg-accent/30 p-6 rounded-lg">
+                  <h3 className="font-serif text-xl mb-3">Untaught Classes (Fridays)</h3>
+                  <p className="text-gray-600">
+                    A set of timed poses with no instruction or tuition, and are suitable for all levels - from those just starting off up to those more experienced artists who want to improve by practice.
+                  </p>
+                </div>
+                <div className="bg-accent/30 p-6 rounded-lg">
+                  <h3 className="font-serif text-xl mb-3">Taught Classes (Tuesdays)</h3>
+                  <p className="text-gray-600">
+                    Provide instruction, feedback and tuition in a structured class setting. Contact{" "}
+                    <a href="mailto:dublindrawing@gmail.com" className="text-primary hover:underline">
+                      dublindrawing@gmail.com
+                    </a>{" "}
+                    for further information.
+                  </p>
+                </div>
+                <Link
+                  to="/classes"
+                  className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200"
+                >
+                  View Available Classes
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
