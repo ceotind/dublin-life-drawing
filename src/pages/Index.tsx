@@ -54,6 +54,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Special Offer Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#F1F0FB]">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center animate-fadeIn">
+            <span className="inline-block px-4 py-1 mb-4 text-sm bg-[#FDE1D3] text-[#F97316] rounded-full font-medium">
+              Special Offer
+            </span>
+            <div className="space-y-4">
+              <div className="inline-block bg-[#F97316] text-white px-6 py-2 rounded-full text-lg font-medium">
+                20€ off
+              </div>
+              <h2 className="text-3xl font-serif">Four Friday Classes</h2>
+              <div className="flex items-center justify-center gap-3 text-2xl font-medium">
+                <span className="text-[#F97316]">€84</span>
+                <span className="text-gray-400 line-through">€104</span>
+              </div>
+              <Link
+                to="/classes"
+                className="inline-flex items-center px-8 py-4 mt-6 bg-[#F97316] text-white rounded-lg hover:bg-[#F97316]/90 transition-colors duration-200 text-lg font-medium"
+              >
+                Book Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Artwork */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
