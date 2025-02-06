@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="font-serif text-lg font-medium">DoodleHaven</h3>
+            <h3 className="font-serif text-lg font-medium">Dublin Life Drawing</h3>
             <p className="text-gray-600 text-sm">
               Inspiring creativity through art education in the heart of Dublin.
             </p>
@@ -41,7 +41,7 @@ const Footer = () => {
               <li>123 Creative Lane</li>
               <li>Dublin 2, Ireland</li>
               <li>+353 1 234 5678</li>
-              <li>info@doodlehaven.ie</li>
+              <li>dublindrawing@gmail.com</li>
             </ul>
           </div>
           
@@ -64,7 +64,7 @@ const Footer = () => {
         <Separator className="my-8" />
         
         <div className="text-center text-sm text-gray-600">
-          <p>&copy; {new Date().getFullYear()} DoodleHaven. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Designed by <a href="https://sharpdigital.in" className="text-primary hover:underline">Sharp Digital</a></p>
         </div>
       </div>
     </footer>
